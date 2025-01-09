@@ -2,16 +2,16 @@
 //  FitoFitApp.swift
 //  FitoFit
 //
-//  Created by Frank Liu on 10/29/24.
-//
 
 import SwiftUI
 
 @main
 struct FitoFitApp: App {
+    @StateObject private var profileViewModel = ProfileViewModel()
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(profileViewModel)
         }
     }
 }
